@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     
     the_user.username = params.fetch("query_username")
     the_user.save
-    redirect_to("/users/#{user.username}")
+    redirect_to("/users/#{the_user.username}") #changed to the_user vs user; needed to be in line with local variable
   end
 
 end

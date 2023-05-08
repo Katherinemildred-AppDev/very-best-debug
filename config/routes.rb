@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get("/", { :controller => "users", :action => "index" }) #changed home to index
   get("/users", { :controller => "users", :action => "index" }) #changed all_users to index
-  get("/users/:username", { :controller => "user", :action => "show" })
+  get("/users/:username", { :controller => "users", :action => "show" }) #made controller users vs user
   get("/insert_user_record", { :controller => "venues", :action => "create" })
-  get("/update_users/:user_id", { :controller => "users", :action => "update" })
+  get("/update_user/:user_id", { :controller => "users", :action => "update" }) # changed update_users to update_user
 
   get("/venues", { :controller => "venues", :action => "index" })
   get("/insert_venue_record", { :controller => "venues", :action => "create" })
