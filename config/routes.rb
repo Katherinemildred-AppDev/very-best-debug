@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get("/insert_venue_record", { :controller => "venues", :action => "create" })
   get("/venues/:venue_id", { :controller => "venues", :action => "show" }) #changed "an_id" to "venue_id"
   post("/update_venue/:venue_id", { :controller => "venues", :action => "update" }) #changed "an_id" to "venue_id"
-  get("/delete_venue/:id_to_delete", { :controller => "venue", :action => "destroy" })
+  get("/delete_venue/:venue_id", { :controller => "venues", :action => "destroy" })
 
   get("/insert_comment_record", { :controller => "comments", :action => "create" })
 end
