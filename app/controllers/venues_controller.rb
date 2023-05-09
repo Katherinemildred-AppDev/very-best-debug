@@ -21,7 +21,7 @@ class VenuesController < ApplicationController
     @the_venue.neighborhood = params.fetch("query_neighborhood")
     @the_venue.save
 
-    redirect_to("/venues/#{@the_venue.name}")
+    redirect_to("/venues/#{@the_venue.id}")
   end
 
   def update
